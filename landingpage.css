@@ -1,0 +1,154 @@
+  @font-face {
+            font-family: 'Carena';
+            src: url('Carena-Regular.otf');
+        }
+
+        :root {
+            --fairyTale: #F4C5D7;
+            --rosePompadour: #E981A4;
+            --cherryBlossom: #F9ADB7;
+            --teaRose: #FEC9C3;
+            --cosmicLatte: #FAF2DD;
+        }
+
+        html {
+            background-color: #feeeed;
+            opacity: 0.7;
+            background-image: radial-gradient(var(--fairyTale) 1.3px, #feeeed 1.3px);
+            background-size: 26px 26px;
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        .form-container {
+            max-width: 600px;
+            margin: 9em auto;
+            padding: 20px;
+            border-radius: 5px;
+
+        }
+
+        h1 {
+            font-family: 'Carena';
+            font-size: 3em;
+            font-weight: 100;
+            font-stretch:extra-expanded;
+            text-align: center;
+            color: var(--rosePompadour);
+            margin: 1em 0;
+        }
+
+        input[type="text"], input[type="password"], button {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .inputContainer {
+            width: 350px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(to bottom, var(--rosePompadour), var(--teaRose));
+            border-radius: 30px;
+            overflow: hidden;
+            cursor: pointer;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.075);
+            margin: 1em;
+        }
+
+        #username, #password {
+            width: 340px;
+            height: 40px;
+            border: none;
+            outline: none;
+            caret-color: var(--rosePompadour);
+            background-color: rgb(255, 255, 255);
+            border-radius: 30px;
+            padding-left: 15px;
+            margin-top: 10px;
+            letter-spacing: 0.8px;
+            color: var(--rosePompadour);
+            font-size: 13.4px;
+        }
+
+        .actualForm-container {
+            display: flex;
+            justify-content: center;
+        }
+
+        .buttonDiv {
+            display: flex;
+            justify-content: center;
+        }
+
+        .button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px 30px;
+            border: 0;
+            position: relative;
+            overflow: hidden;
+            border-radius: 10rem;
+            transition: all 0.02s;
+            font-weight: bold;
+            color: rgb(37, 37, 37);
+            z-index: 0;
+            box-shadow: 0 0px 7px -5px rgba(0, 0, 0, 0.5);
+            font-family: 'Carena';
+        }
+
+        .button:hover {
+            background: var(--fairyTale);
+            color: var(--rosePompadour);
+            cursor: pointer;
+        }
+
+        .button:active {
+            transform: scale(0.97);
+        }
+
+        .hoverOver {
+            position: absolute;
+            bottom: 0;
+            top: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1;
+        }
+
+        .hoverOver div {
+            background: rgb(222,0,75);
+            background: linear-gradient(90deg, var(--cosmicLatte) 0%, var(--rosePompadour) 49%, var(--cherryBlossom) 100%);
+            border-radius: 40rem;
+            width: 10rem;
+            height: 10rem;
+            transition: 0.4s;
+            filter: blur(20px);
+            animation: effect infinite 3s linear;
+            opacity: 0.5;
+        }
+
+        .button:hover .hoverOver div {
+            width: 8rem;
+            height: 8rem;
+        }
+
+        @keyframes effect {
+
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }

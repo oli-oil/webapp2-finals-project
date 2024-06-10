@@ -1,0 +1,94 @@
+@font-face {
+    font-family: 'Carena';
+    src: url('Carena-Regular.otf');
+    }
+
+    :root {
+        --fairyTale: #F4C5D7;
+        --rosePompadour: #E981A4;
+        --cherryBlossom: #F9ADB7;
+        --teaRose: #FEC9C3;
+        --cosmicLatte: #FAF2DD;
+    }
+
+    html {
+        background-color: #feeeed;
+        opacity: 0.7;
+        background-image: radial-gradient(var(--fairyTale) 1.3px, #feeeed 1.3px);
+        background-size: 26px 26px;
+    }
+    
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+
+    }
+
+    .form-container {
+        max-width: 600px;
+        margin: 9em auto;
+        padding: 20px;
+        border-radius: 5px;
+
+    }
+
+    h1 {
+        font-family: 'Carena';
+        font-size: 3em;
+        font-weight: 100;
+        font-stretch:extra-expanded;
+        text-align: center;
+        color: var(--rosePompadour);
+        margin: 2em 0;
+    }
+    hr {
+        border: 2px dashed var(--rosePompadour);
+        margin-bottom: 2em;
+    }
+
+    .postContainer {
+        max-width: 600px;
+        margin: 50px auto;
+        padding: 20px;                                                                                      
+        border-radius: 5px;
+    }
+
+    #postLists {
+        padding: 0;
+
+        display: grid;
+        grid-template-columns: repeat(5, auto);
+
+    }
+
+    li {
+        font-family: 'Carena';
+        font-size: 1.4em;
+        color: var(--rosePompadour);
+        text-align: center;
+        margin: 1em;
+        padding: 1em;
+        border-radius: 5px;
+        cursor: pointer;
+        list-style-type: none;
+        border: 3px dotted var(--rosePompadour);
+        border-radius: 3em;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        text-decoration: none;
+    }
+
+    li:hover {
+        background-color: var(--cosmicLatte);
+        transform: scale(1.1);
+        transition: all 0.4s ease-in-out;
+    }
+
+    li a {
+        text-decoration: none;
+        color: var(--rosePompadour);
+    }
